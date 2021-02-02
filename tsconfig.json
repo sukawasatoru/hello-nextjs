@@ -4,7 +4,6 @@
     "module": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
     "sourceMap": true,
@@ -27,10 +26,11 @@
       "dom.iterable",
       "esnext"
     ],
+    "allowJs": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
   },
   "include": [
     "src/**/*"
