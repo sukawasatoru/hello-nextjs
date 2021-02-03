@@ -5,7 +5,7 @@ interface Props {
   hello: string;
 }
 
-const PageCss: NextPage<Props> = (props) => {
+const NextImage: NextPage<Props> = (props) => {
   return <>
     <Image
       src="/me.jpg"
@@ -23,4 +23,4 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-export default PageCss;
+export default NextImage;

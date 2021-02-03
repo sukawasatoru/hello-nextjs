@@ -4,7 +4,7 @@ interface Props {
   myEnv: string;
 }
 
-const PageCss: NextPage<Props> = (props) => {
+const Dotenv: NextPage<Props> = (props) => {
   return <>
     <p>
       Env: {props.myEnv}
@@ -20,4 +20,4 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-export default PageCss;
+export default Dotenv;
