@@ -17,15 +17,18 @@
 'use strict';
 
 const ESLintWebpackPlugin = require("eslint-webpack-plugin");
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
   webpack: (config, options) => {
     if (options.dev) {
       config.plugins.push(new ESLintWebpackPlugin({
-        extensions: [
-          'js', 'jsx', 'ts', 'tsx',
-        ],
-      }));
+          extensions: [
+            'js', 'jsx', 'ts', 'tsx',
+          ],
+        }),
+        new ForkTsCheckerWebpackPlugin(),
+      );
     }
     return config;
   },
