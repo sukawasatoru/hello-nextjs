@@ -10,8 +10,9 @@
   "license": "Apache-2.0",
   "private": "true",
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "dev": "next dev",
+    "export": "next build && next export",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "start": "next start"
   },
