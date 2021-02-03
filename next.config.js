@@ -16,20 +16,21 @@
 
 'use strict';
 
-const ESLintWebpackPlugin = require("eslint-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
   webpack: (config, options) => {
-    if (options.dev) {
-      config.plugins.push(new ESLintWebpackPlugin({
-          extensions: [
-            'js', 'jsx', 'ts', 'tsx',
+    config.plugins.push(
+      new ForkTsCheckerWebpackPlugin({
+        typescript: options.dev,
+        eslint: {
+          files: [
+            'src/**/*.ts',
+            'src/**/*.tsx',
           ],
-        }),
-        new ForkTsCheckerWebpackPlugin(),
-      );
-    }
+        },
+      }),
+    );
     return config;
   },
 };
