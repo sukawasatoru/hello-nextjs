@@ -1,5 +1,5 @@
 import {GetStaticProps, NextPage} from "next";
-import styles from './pagecss.module.css';
+import styles from '@/pages/pagecss.module.css';
 
 interface Props {
   hello: string;
