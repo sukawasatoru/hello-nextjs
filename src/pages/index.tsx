@@ -1,15 +1,46 @@
 import {GetStaticProps, NextPage} from "next";
+import Link from "next/link";
 
 interface Props {
   hello: string;
 }
 
 const Index: NextPage<Props> = (props) => {
-  return (
+  return <>
     <p>
       {props.hello}
     </p>
-  );
+    <ul>
+      <li>
+        <Link href="/dotenv">
+          <a>
+            dotenv
+          </a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/image">
+          <a>
+            image
+          </a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/pagecss">
+          <a>
+            pagecss
+          </a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/serversideprop">
+          <a>
+            serversideprop
+          </a>
+        </Link>
+      </li>
+    </ul>
+  </>;
 };
 
 export const getStaticProps: GetStaticProps<Props> = async context => {
