@@ -1,5 +1,5 @@
-import Image from "next/image";
 import {GetStaticProps, NextPage} from "next";
+import Image from "next/image";
 
 interface Props {
   hello: string;
