@@ -52,6 +52,13 @@ const Index: NextPage<Props> = (props) => {
           </a>
         </Link>
       </li>
+      <li>
+        <Link href="/swr">
+          <a>
+            SWR
+          </a>
+        </Link>
+      </li>
     </ul>
   </>;
 };
