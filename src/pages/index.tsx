@@ -32,6 +32,13 @@ const Index: NextPage<Props> = (props) => {
         </Link>
       </li>
       <li>
+        <Link href="/local-storage">
+          <a>
+            LocalStorage
+          </a>
+        </Link>
+      </li>
+      <li>
         <Link href="/pagecss">
           <a>
             pagecss
