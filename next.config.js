@@ -19,6 +19,7 @@
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
+  poweredByHeader: false,
   webpack: (config, options) => {
     if (options.isServer) {
       config.plugins.push(
