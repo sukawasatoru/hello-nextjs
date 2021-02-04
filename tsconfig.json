@@ -8,8 +8,7 @@
     "jsx": "preserve",
     "sourceMap": true,
     "rootDirs": [
-      "src/components",
-      "src/pages"
+      "src"
     ],
     "baseUrl": ".",
     "newLine": "lf",
@@ -30,7 +29,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": true
   },
   "include": [
     "src/**/*"
