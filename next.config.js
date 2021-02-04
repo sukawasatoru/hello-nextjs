@@ -20,17 +20,19 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 module.exports = {
   webpack: (config, options) => {
-    config.plugins.push(
-      new ForkTsCheckerWebpackPlugin({
-        typescript: options.dev,
-        eslint: {
-          files: [
-            'src/**/*.ts',
-            'src/**/*.tsx',
-          ],
-        },
-      }),
-    );
+    if (options.isServer) {
+      config.plugins.push(
+        new ForkTsCheckerWebpackPlugin({
+          typescript: options.dev,
+          eslint: {
+            files: [
+              'src/**/*.ts',
+              'src/**/*.tsx',
+            ],
+          },
+        }),
+      );
+    }
     return config;
   },
 };
