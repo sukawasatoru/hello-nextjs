@@ -1,4 +1,5 @@
 import {GetStaticProps, NextPage} from "next";
+import Head from "next/head";
 import Link from "next/link";
 
 interface Props {
@@ -7,6 +8,11 @@ interface Props {
 
 const Index: NextPage<Props> = (props) => {
   return <>
+    <Head>
+      <title>
+        Hello Next.js
+      </title>
+    </Head>
     <p>
       {props.hello}
     </p>
@@ -29,6 +35,13 @@ const Index: NextPage<Props> = (props) => {
         <Link href="/pagecss">
           <a>
             pagecss
+          </a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/routes">
+          <a>
+            routes
           </a>
         </Link>
       </li>
